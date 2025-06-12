@@ -5,15 +5,7 @@ const nextConfig = {
       allowedOrigins: ['localhost:5000'],
     },
   },
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'randomuser.me',
-        pathname: '/api/portraits/**',
-      },
-    ],
-  },
+ 
 };
 
 module.exports = nextConfig; 

@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 import { Button } from '@/components/Button/Button';
 import styles from './page.module.scss';
 import { logout } from './actions';
@@ -59,14 +58,6 @@ export function DashboardContent() {
 
   return (
     <div className={styles.welcomeCard}>
-      <Image 
-        src={user.picture.large} 
-        alt="Profile" 
-        className={styles.profileImage}
-        width={128}
-        height={128}
-        priority
-      />
       <h1 className={styles.title}>خوش آمدید!</h1>
       <div className={styles.userInfo}>
         <p className={styles.name}>
@@ -78,9 +69,9 @@ export function DashboardContent() {
           {user.location.city}, {user.location.state}, {user.location.country}
         </p>
       </div>
-      <Button 
-        onClick={handleLogout} 
-        variant="secondary"
+      <Button
+        onClick={handleLogout}
+        variant='secondary'
         isLoading={isLoggingOut}
         className={styles.logoutButton}
       >
@@ -88,4 +79,4 @@ export function DashboardContent() {
       </Button>
     </div>
   );
-} 
+}
