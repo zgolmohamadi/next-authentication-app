@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/Button/Button';
 import { Input } from '@/components/Input/Input';
+import { validatePhone } from '@/utils/validation';
 import styles from './page.module.scss';
 
 interface User {
@@ -35,11 +36,6 @@ export function AuthForm({ loginUser }: AuthFormProps) {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const validatePhone = (phone: string) => {
-    const phoneRegex = /^09[0-9]{9}$/;
-    return phoneRegex.test(phone);
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
