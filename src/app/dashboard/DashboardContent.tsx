@@ -59,7 +59,7 @@ export function DashboardContent() {
   return (
     <div className={styles.welcomeCard}>
       <h1 className={styles.title}>خوش آمدید!</h1>
-      <div className={styles.userInfo}>
+      <div className={styles.userInfo} dir="ltr">
         <p className={styles.name}>
           {user.name.title} {user.name.first} {user.name.last}
         </p>
