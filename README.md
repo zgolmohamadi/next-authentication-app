@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Authentication System
+
+A simple authentication system built with Next.js, TypeScript, and SCSS Modules.
+
+## Demo
+
+Live demo: [https://next-authentication-app-cm1g.vercel.app/auth](https://next-authentication-app-cm1g.vercel.app/auth)
+
+## Features
+
+* Phone number authentication (Iranian mobile number format)
+* Form validation
+* Responsive design
+* Dashboard with user profile
+* Secure authentication flow
+* RTL support for Persian language
+
+## Technologies Used
+
+* Next.js 15.3.3
+* TypeScript
+* SCSS Modules
+* Local Storage for state management
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+```bash
+git clone https://github.com/zgolmohamadi/next-authentication-app.git
+```
 
+2. Install dependencies:
+```bash
+npm install
+# or
+pnpm install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:5000](http://localhost:5000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+  ├── app/              # App router pages
+  │   ├── auth/        # Authentication pages
+  │   └── dashboard/   # Dashboard pages
+  ├── components/      # Reusable components
+  │   ├── Button/     # Button component
+  │   └── Input/      # Input component
+  ├── styles/         # Global styles
+  └── types/          # TypeScript type definitions
+```
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
+MIT
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## About
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is a simple authentication system that demonstrates:
+- Phone number validation
+- User authentication flow
+- Protected routes
+- Responsive UI design
+- RTL support for Persian language
