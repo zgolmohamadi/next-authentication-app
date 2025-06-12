@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { Button } from '@/components/Button/Button';
 import styles from './page.module.scss';
 import { logout } from './actions';
@@ -58,7 +59,14 @@ export function DashboardContent() {
 
   return (
     <div className={styles.welcomeCard}>
-      <img src={user.picture.large} alt="Profile" className={styles.profileImage} />
+      <Image 
+        src={user.picture.large} 
+        alt="Profile" 
+        className={styles.profileImage}
+        width={128}
+        height={128}
+        priority
+      />
       <h1 className={styles.title}>خوش آمدید!</h1>
       <div className={styles.userInfo}>
         <p className={styles.name}>
